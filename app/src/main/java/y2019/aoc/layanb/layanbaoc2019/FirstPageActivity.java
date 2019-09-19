@@ -1,5 +1,6 @@
 package y2019.aoc.layanb.layanbaoc2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,11 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        if(v == buttonToGoLogIn){
+            Intent i = new Intent(this, logInActivity.class);
+            startActivity(i);
+
+        }
 
     }
 }
