@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class logInActivity extends AppCompatActivity implements View.OnClickListener {
+public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
     //1.properties defenition
     EditText editTextEmail, editTextPassword;
