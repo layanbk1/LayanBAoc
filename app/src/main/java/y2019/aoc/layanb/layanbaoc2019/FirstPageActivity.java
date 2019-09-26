@@ -30,13 +30,17 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        if(v == buttonToGoLogIn){
+        if (v == buttonToGoLogIn) {
             Intent i = new Intent(this, LogInActivity.class);
             startActivity(i);
 
+        } else if (v == buttonGoToSignUp) {
+            Intent i = new Intent(this, SignUpActivity.class);
+            startActivity(i);
         }
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,10 +48,11 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         return super.onCreateOptionsMenu(menu);
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.profile:
                 Intent i = new Intent(this, Profile.class);
                 startActivity(i);
@@ -55,4 +60,5 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
