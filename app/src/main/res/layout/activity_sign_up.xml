@@ -8,22 +8,34 @@
     android:orientation="vertical"
     tools:context=".SignUpActivity">
 
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="109dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="SIGNUP"
+        android:textSize="24sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textViewFirstName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Name" />
+            android:gravity="center"
+            android:text="First Name" />
 
         <EditText
             android:id="@+id/editTextName"
-            android:layout_width="251dp"
+            android:layout_width="224dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:text=" " />
@@ -31,35 +43,42 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewLastName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Last Name" />
 
         <EditText
             android:id="@+id/editTextLastName"
-            android:layout_width="187dp"
+            android:layout_width="224dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:text=" " />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewEmail"
+            android:layout_width="54dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Email" />
 
         <EditText
@@ -74,18 +93,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/textViewPassword"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Password" />
 
         <EditText
             android:id="@+id/editTextPasswordTwo"
-            android:layout_width="180dp"
+            android:layout_width="157dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -97,13 +120,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewConfPassword"
+            android:layout_width="132dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Confirm password" />
 
         <EditText
@@ -122,6 +148,7 @@
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="23dp"
         android:text="NEXT" />
+
 </LinearLayout>

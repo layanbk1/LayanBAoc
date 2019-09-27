@@ -42,23 +42,6 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.app_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.profile:
-                Intent i = new Intent(this, Profile.class);
-                startActivity(i);
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 }

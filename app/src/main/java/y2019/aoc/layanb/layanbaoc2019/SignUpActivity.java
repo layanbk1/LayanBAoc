@@ -44,13 +44,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             }
 
             else {
-                    Intent i = new Intent(this, MainActivity.class);
-                    i.putExtra("name", editTextName.getText().toString());
+                Intent i = new Intent(this, WhenSignUpActivity.class);
+                i.putExtra("name", editTextName.getText().toString());
                 i.putExtra("last name", editTextLastName.getText().toString());
                 i.putExtra("email", editTextEmailTwo.getText().toString());
-                    i.putExtra("password", editTextPasswordTwo.getText().toString());
+                i.putExtra("password", editTextPasswordTwo.getText().toString());
                 i.putExtra("confirmed password", editTextConfirmPassword.getText().toString());
-                    startActivity(i);
+                startActivity(i);
 
             }
 
