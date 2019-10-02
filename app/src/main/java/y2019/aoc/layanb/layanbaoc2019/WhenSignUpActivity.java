@@ -9,5 +9,6 @@ public class WhenSignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_when_sign_up);
+        listItems = getResources().getStringArray(R.array.club_list);
     }
 }
