@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class FirstPageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button buttonToGoLogIn, buttonGoToSignUp;
+    Button buttonGoToLogIn, buttonGoToSignUp;
 
 
     @Override
@@ -19,8 +19,8 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
-        buttonToGoLogIn = findViewById(R.id.GoToLogIn);
-        buttonToGoLogIn.setOnClickListener(this);
+        buttonGoToLogIn = findViewById(R.id.GoToLogIn);
+        buttonGoToLogIn.setOnClickListener(this);
 
         buttonGoToSignUp = findViewById(R.id.GoToSignUp);
         buttonGoToSignUp.setOnClickListener(this);
@@ -30,7 +30,7 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        if (v == buttonToGoLogIn) {
+        if (v == buttonGoToLogIn) {
             Intent i = new Intent(this, LogInActivity.class);
             startActivity(i);
 

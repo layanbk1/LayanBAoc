@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -33,6 +34,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         if(v == buttonNext)
         {
+            if (v == ImageButton) {
+                Intent i = new Intent(this, LogInActivity.class);
+                startActivity(i);
+            }
             if(editTextPasswordTwo.getText().toString().equals(""))
             {
                 Toast.makeText(this, "empty password or email", Toast.LENGTH_LONG).show();

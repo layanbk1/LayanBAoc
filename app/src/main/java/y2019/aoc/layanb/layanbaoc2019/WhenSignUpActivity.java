@@ -17,6 +17,8 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
 
     Button buttonWhenSignUp;
     EditText editTextWalName;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,8 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        }
+
+            });
     }
 
     @Override
