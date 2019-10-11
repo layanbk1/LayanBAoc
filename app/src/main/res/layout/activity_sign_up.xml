@@ -125,7 +125,6 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:hint="Password"
             android:text="" />
     </LinearLayout>
 
@@ -151,7 +150,6 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:hint="Password"
             android:text="" />
     </LinearLayout>
 

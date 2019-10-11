@@ -22,7 +22,8 @@
         <activity android:name=".Settings" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".WhenSignUpActivity" />
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".AlertActivity"></activity>
     </application>
 
 </manifest>

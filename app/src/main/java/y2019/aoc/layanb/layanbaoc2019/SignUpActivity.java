@@ -13,6 +13,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     EditText editTextName,editTextLastName ,editTextEmailTwo ,editTextPasswordTwo ,editTextConfirmPassword;
     Button buttonNext;
+    ImageButton imageButton3;
 
 
     @Override
@@ -28,38 +29,42 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         buttonNext = findViewById(R.id.buttonNext);
         buttonNext.setOnClickListener(this);
+
+        imageButton3 = findViewById(R.id.imageButton3);
+        imageButton3.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v == buttonNext)
         {
-            if (v == ImageButton) {
-                Intent i = new Intent(this, LogInActivity.class);
-                startActivity(i);
-            }
-            if(editTextPasswordTwo.getText().toString().equals(""))
+
+            if(editTextPasswordTwo.getText().toString().equals("")|| editTextEmailTwo.getText().toString().equals(""))
             {
                 Toast.makeText(this, "empty password or email", Toast.LENGTH_LONG).show();
             }
 
-            if(!editTextPasswordTwo.getText().toString().equals(editTextConfirmPassword.getText().toString()))
-            {
-                Toast.makeText(this, "password is wrong reconfirm password", Toast.LENGTH_LONG).show();
-            }
-
             else {
-                Intent i = new Intent(this, WhenSignUpActivity.class);
-                i.putExtra("name", editTextName.getText().toString());
-                i.putExtra("last name", editTextLastName.getText().toString());
-                i.putExtra("email", editTextEmailTwo.getText().toString());
-                i.putExtra("password", editTextPasswordTwo.getText().toString());
-                i.putExtra("confirmed password", editTextConfirmPassword.getText().toString());
-                startActivity(i);
+                if (!editTextPasswordTwo.getText().toString().equals(editTextConfirmPassword.getText().toString())) {
+                    Toast.makeText(this, "password is wrong reconfirm password", Toast.LENGTH_LONG).show();
 
+                } else {
+                    Intent i = new Intent(this, WhenSignUpActivity.class);
+                    i.putExtra("name", editTextName.getText().toString());
+                    i.putExtra("last name", editTextLastName.getText().toString());
+                    i.putExtra("email", editTextEmailTwo.getText().toString());
+                    i.putExtra("password", editTextPasswordTwo.getText().toString());
+                    i.putExtra("confirmed password", editTextConfirmPassword.getText().toString());
+                    startActivity(i);
+
+                }
             }
-
         }
 
+     if (v == imageButton3) {
+        Intent i = new Intent(this, CameraActivity.class);
+        startActivity(i);
     }
+
+}
 }
