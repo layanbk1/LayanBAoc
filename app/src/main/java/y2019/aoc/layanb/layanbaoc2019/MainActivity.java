@@ -5,25 +5,48 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvEmail,tvPassword;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String password = getIntent().getStringExtra("password");
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+        tabHost.setup();
 
-        String email = getIntent().getStringExtra("email");
+        TabHost.TabSpec spec = tabHost.newTabSpec("transactions");
+        spec.setContent(R.id.tabTran);
+        spec.setIndicator("transactions");
+        tabHost.addTab(spec);
 
-        tvEmail = findViewById(R.id.tvEmail);
-        tvPassword = findViewById(R.id.tvPassword);
 
-        tvEmail.setText(email);
-        tvPassword.setText(password);
+       spec = tabHost.newTabSpec("overview");
+        spec.setContent(R.id.tabOverview);
+        spec.setIndicator("overview");
+        tabHost.addTab(spec);
+
+        spec = tabHost.newTabSpec("+");
+        spec.setContent(R.id.tabPlus);
+        spec.setIndicator("+");
+        tabHost.addTab(spec);
+
+        spec = tabHost.newTabSpec("plannings");
+        spec.setContent(R.id.tabPlannings);
+        spec.setIndicator("plannings");
+        tabHost.addTab(spec);
+
+        spec = tabHost.newTabSpec("settings");
+        spec.setContent(R.id.tabSettings);
+        spec.setIndicator("settings");
+        tabHost.addTab(spec);
 
 
 

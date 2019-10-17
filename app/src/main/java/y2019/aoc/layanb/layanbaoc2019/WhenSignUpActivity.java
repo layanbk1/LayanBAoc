@@ -24,6 +24,9 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_when_sign_up);
 
+        buttonWhenSignUp = findViewById(R.id.buttonWhenSignUp);
+        buttonWhenSignUp.setOnClickListener(this);
+
         Spinner s = (Spinner) findViewById(R.id.spinner1);
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
