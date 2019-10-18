@@ -24,6 +24,9 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_when_sign_up);
 
+        editTextWalName = findViewById(R.id.editTextWalName);
+
+
         buttonWhenSignUp = findViewById(R.id.buttonWhenSignUp);
         buttonWhenSignUp.setOnClickListener(this);
 

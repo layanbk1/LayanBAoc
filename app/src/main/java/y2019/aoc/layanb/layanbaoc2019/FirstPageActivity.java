@@ -19,6 +19,7 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
+
         buttonGoToLogIn = findViewById(R.id.GoToLogIn);
         buttonGoToLogIn.setOnClickListener(this);
 

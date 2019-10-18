@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    ImageButton imageWalButton;
+    TextView textViewWalName;
 
 
 
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        imageWalButton = findViewById(R.id.imageWalButton);
+        imageWalButton.setOnClickListener(this);
 
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
@@ -73,5 +79,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+
+    }
+
+    public void onClick(View v) {
+
+        if (v == imageWalButton) {
+            Intent i = new Intent(this, OverviewActivity.class);
+            i.putExtra("name", textViewWalName.getText().toString());
+            startActivity(i);
+        }
+
     }
 }

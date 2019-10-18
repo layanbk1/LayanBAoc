@@ -23,7 +23,8 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".WhenSignUpActivity" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".AlertActivity" />
+        <activity android:name=".OverviewActivity" />
+        <activity android:name=".Tab1Fragment"></activity>
     </application>
 
 </manifest>

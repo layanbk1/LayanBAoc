@@ -1,6 +1,7 @@
 package y2019.aoc.layanb.layanbaoc2019;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Title")
+                .setMessage("example message")
+                .setNegativeButton("OK",null)
+                .show();
 
         editTextName = findViewById(R.id.editTextName);
         editTextLastName = findViewById(R.id.editTextLastName);
