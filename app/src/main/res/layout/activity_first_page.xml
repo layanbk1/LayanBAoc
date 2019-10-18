@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".FirstPageActivity">
 
+
+
     <Button
         android:id="@+id/GoToLogIn"
         android:layout_width="176dp"
