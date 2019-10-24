@@ -12,51 +12,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton imageWalButton;
+    ImageButton imageWalButton,imageAddWal;
     TextView textViewWalName;
 
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        imageWalButton = findViewById(R.id.imageWalButton);
-        imageWalButton.setOnClickListener(this);
-
-        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
-        tabHost.setup();
-
-        TabHost.TabSpec spec = tabHost.newTabSpec("transactions");
-        spec.setContent(R.id.tabTran);
-        spec.setIndicator("transactions");
-        tabHost.addTab(spec);
-
-
-       spec = tabHost.newTabSpec("overview");
-        spec.setContent(R.id.tabOverview);
-        spec.setIndicator("overview");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("+");
-        spec.setContent(R.id.tabPlus);
-        spec.setIndicator("+");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("plannings");
-        spec.setContent(R.id.tabPlannings);
-        spec.setIndicator("plannings");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("settings");
-        spec.setContent(R.id.tabSettings);
-        spec.setIndicator("settings");
-        tabHost.addTab(spec);
-
-
-
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.app_menu, menu);
@@ -89,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             i.putExtra("name", textViewWalName.getText().toString());
             startActivity(i);
         }
+        if (v == imageAddWal) {
+            Intent i = new Intent(this, WhenSignUpActivity.class);
+            startActivity(i);}
 
     }
 }

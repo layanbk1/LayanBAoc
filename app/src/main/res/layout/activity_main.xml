@@ -7,15 +7,23 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <SearchView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right" />
+        android:orientation="horizontal">
+
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+        </SearchView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
@@ -33,114 +41,19 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="TextView"
+            />
+
+        <ImageButton
+            android:id="@+id/imageAddWal"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/fileimage" />
     </LinearLayout>
 
-    <TabHost
-        android:id="@+id/tabHost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
 
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:orientation="horizontal">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TabWidget>
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/tabTran"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="61dp"
-                        android:text="tab 1" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabOverview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tab 2" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabPlus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tab 3" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabPlannings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tab 4" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabSettings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tab 5" />
-
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-
-    </TabHost>
 
 
 </LinearLayout>

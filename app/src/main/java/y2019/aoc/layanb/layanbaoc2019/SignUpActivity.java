@@ -24,8 +24,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
 
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Title")
-                .setMessage("example message")
+                .setTitle("Tip ;)")
+                .setMessage("you can click on the profile icon and choose your own image")
                 .setNegativeButton("OK",null)
                 .show();
 

@@ -4,7 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".OverviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="197dp"
+            android:layout_height="276dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/imageHomeButton"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/shomebutton" />
+    </LinearLayout>
+
 
     <TabHost
         android:id="@+id/tabHost"
