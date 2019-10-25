@@ -14,7 +14,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageButton imageWalButton,imageAddWal;
     TextView textViewWalName;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+imageWalButton =findViewById(R.id.imageWalButton);
+imageWalButton.setOnClickListener(this);
+
+
+    }
 
 
 
@@ -47,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v == imageWalButton) {
             Intent i = new Intent(this, OverviewActivity.class);
-            i.putExtra("name", textViewWalName.getText().toString());
+//            i.putExtra("name", textViewWalName.getText().toString());
             startActivity(i);
         }
         if (v == imageAddWal) {

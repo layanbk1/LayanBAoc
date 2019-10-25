@@ -13,11 +13,12 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="197dp"
-            android:layout_height="276dp"
-            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/ButtonCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/calendarbtn"/>
 
         <ImageButton
             android:id="@+id/imageHomeButton"
