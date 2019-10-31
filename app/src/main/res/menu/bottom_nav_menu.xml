@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_transaction"
+        android:enabled="true"
+        android:icon="@drawable/transactions"
+        android:title="Transactions"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_overview"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Overview"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_plus"
+        android:enabled="true"
+        android:icon="@drawable/plus"
+        android:title=""
+        android:background="transparent"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_plannings"
+        android:enabled="true"
+        android:icon="@drawable/plan"
+        android:title="Plannings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_walsettings"
+        android:enabled="true"
+        android:icon="@drawable/walset"
+        android:title="settings"
+        app:showAsAction="ifRoom" />
+</menu>

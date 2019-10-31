@@ -9,154 +9,59 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/imageHomeButton"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginRight="190dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
+
             app:srcCompat="@drawable/shomebutton" />
-
-        <SearchView
-            android:layout_width="73dp"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:id="@+id/ButtonCalendar"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/calendarbtn" />
-    </LinearLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_weight="6">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
 
-            <TabHost
-                android:id="@+id/tabHost"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="bottom">
+            <ImageButton
+                android:id="@+id/ButtonCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/calendarbtn" />
 
-                <LinearLayout
-                    android:layout_width="400dp"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom|center"
-                    android:orientation="horizontal">
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center"
-                        android:gravity="center">
-
-                    </TabWidget>
-
-                    <FrameLayout
-                        android:id="@android:id/tabcontent"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:id="@+id/tabTran"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#000"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="61dp"
-                                android:text="tab 1" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tabOverview"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#000"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="tab 2" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tabPlus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#000"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="tab 3" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tabPlannings"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#000"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="tab 4" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tabSettings"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#000"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="tab 5" />
-
-
-                        </LinearLayout>
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
-
-            </TabHost>
+            </SearchView>
         </LinearLayout>
-    </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

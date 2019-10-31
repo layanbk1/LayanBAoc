@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -23,7 +25,7 @@ import java.util.Calendar;
 
 public class OverviewActivity extends AppCompatActivity {
 
-    private Overview2Activity.SectionsPagerAdapter mSectionsPagerAdapter;
+  //  private OverviewActivity.SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     ImageButton ButtonCalendar;
 
@@ -47,40 +49,26 @@ public class OverviewActivity extends AppCompatActivity {
                     datePickerDialog.show();
             }
         });
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_transaction:
+                    case R.id.action_overview:
+                    case R.id.action_plus:
+                    case R.id.action_plannings:
+                    case R.id.action_walsettings:
 
-        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
-        tabHost.setup();
-
-        TabHost.TabSpec spec = tabHost.newTabSpec("transactions");
-        spec.setContent(R.id.tabTran);
-        spec.setIndicator("transactions");
-        tabHost.addTab(spec);
-
-
-        spec = tabHost.newTabSpec("overview");
-        spec.setContent(R.id.tabOverview);
-        spec.setIndicator("overview");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("+");
-        spec.setContent(R.id.tabPlus);
-        spec.setIndicator("+");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("plannings");
-        spec.setContent(R.id.tabPlannings);
-        spec.setIndicator("plannings");
-        tabHost.addTab(spec);
-
-        spec = tabHost.newTabSpec("settings");
-        spec.setContent(R.id.tabSettings);
-        spec.setIndicator("settings");
-        tabHost.addTab(spec);
-
-
+                }
+                return true;
+            }
+        });
     }
 
-    private DatePickerDialog.OnDateSetListener dateSetListener =
+
+
+     DatePickerDialog.OnDateSetListener dateSetListener =
             new DatePickerDialog.OnDateSetListener() {
                 public void onDateSet(DatePicker view, int year, int month, int day) {
                     Toast.makeText(getApplicationContext(), "selected date is " + view.getYear() +
