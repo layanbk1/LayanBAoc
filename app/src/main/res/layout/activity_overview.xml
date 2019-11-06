@@ -17,7 +17,7 @@
             android:id="@+id/imageHomeButton"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-
+            android:background="transparent"
             app:srcCompat="@drawable/shomebutton" />
 
         <LinearLayout
@@ -30,6 +30,7 @@
                 android:id="@+id/ButtonCalendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="transparent"
                 app:srcCompat="@drawable/calendarbtn" />
 
             <SearchView
