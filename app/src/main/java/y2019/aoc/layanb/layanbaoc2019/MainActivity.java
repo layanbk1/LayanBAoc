@@ -17,26 +17,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton imageWalButton,imageAddWal;
     TextView textViewWalName;
 
+
+
     @Override
-    protected void onCreate(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-imageWalButton =findViewById(R.id.imageWalButton);
-imageWalButton.setOnClickListener(this);
+          imageWalButton =findViewById(R.id.imageWalButton);
+          imageWalButton.setOnClickListener(this);
 
-        View view = inflater.inflate(R.layout.fragment_rssitem_detail,
-                container, false);
-        ImageButton imageButton = (ImageButton) view.findViewById(R.id.imageAddWal);
-        ImageButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                // do something
-            }
-        });
-        return view;
 
     }
 

@@ -54,8 +54,8 @@ public class OverviewActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.action_transaction:
                     case R.id.action_overview:
+                    case R.id.action_transaction:
                     case R.id.action_plus:
                     case R.id.action_plannings:
                     case R.id.action_walsettings:

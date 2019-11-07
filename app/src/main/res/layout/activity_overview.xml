@@ -17,7 +17,7 @@
             android:id="@+id/imageHomeButton"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:background="transparent"
+            android:background="#FDFEFE"
             app:srcCompat="@drawable/shomebutton" />
 
         <LinearLayout
@@ -30,7 +30,7 @@
                 android:id="@+id/ButtonCalendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="transparent"
+                android:background="#FDFEFE"
                 app:srcCompat="@drawable/calendarbtn" />
 
             <SearchView
@@ -54,8 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
-            app:itemBackground="@color/colorPrimary"
-            app:itemIconTint="@android:color/white"
+            android:background="#ABFFCC"
             app:itemTextColor="@android:color/white"
 
             app:menu="@menu/bottom_nav_menu" />
