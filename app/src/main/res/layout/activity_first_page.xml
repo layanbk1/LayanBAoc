@@ -7,6 +7,22 @@
     android:orientation="vertical"
     tools:context=".FirstPageActivity">
 
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView style="?android:textAppearanceMedium"
+            android:padding="16dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
     <Button
@@ -23,5 +39,6 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:text="SIGNUP" />
+</ScrollView>
 
 </LinearLayout>

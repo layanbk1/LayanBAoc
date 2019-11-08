@@ -3,19 +3,22 @@ package y2019.aoc.layanb.layanbaoc2019;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
-public class FirstPageActivity extends AppCompatActivity implements View.OnClickListener {
+public class FirstPageActivity extends AppCompatActivity  implements View.OnClickListener {
 
     Button buttonGoToLogIn, buttonGoToSignUp;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
@@ -26,6 +29,10 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         buttonGoToSignUp = findViewById(R.id.GoToSignUp);
         buttonGoToSignUp.setOnClickListener(this);
 
+     //   ViewGroup rootView = (ViewGroup) inflater.inflate(
+    //    R.layout.fragment_screen_slide_page, container, false);
+
+//   return rootView;
 
     }
 
