@@ -1,6 +1,8 @@
 package y2019.aoc.layanb.layanbaoc2019;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,13 +17,16 @@ import android.widget.ImageView;
 public class FirstPageActivity extends AppCompatActivity  implements View.OnClickListener {
 
     Button buttonGoToLogIn, buttonGoToSignUp;
-
+    ViewPager dotsViewPager;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
+        dotsViewPager = (ViewPager) findViewById(R.id.dots_viewpager);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(dotsViewPager, true);
 
         buttonGoToLogIn = findViewById(R.id.GoToLogIn);
         buttonGoToLogIn.setOnClickListener(this);
