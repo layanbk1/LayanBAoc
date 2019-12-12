@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddWalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="207dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="90dp"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/buttonADD"
+        android:layout_width="103dp"
+        android:layout_height="61dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:text="Add Wallet" />
+
+</FrameLayout>

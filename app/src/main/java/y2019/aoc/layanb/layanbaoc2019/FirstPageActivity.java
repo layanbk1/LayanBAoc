@@ -2,6 +2,7 @@ package y2019.aoc.layanb.layanbaoc2019;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,9 +25,17 @@ public class FirstPageActivity extends AppCompatActivity  implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
-        dotsViewPager = (ViewPager) findViewById(R.id.dots_viewpager);
+
+     //   ViewPager pager = (ViewPager) findViewById(R.id.photos_viewpager);
+    //    PagerAdapter adapter = new PhotosAdapter(getChildFragmentManager(), photosUrl);
+      //  pager.setAdapter(adapter);
+
+      //  TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+      //  tabLayout.setupWithViewPager(pager, true);
+
+      /*  dotsViewPager = (ViewPager) findViewById(R.id.dots_viewpager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
-        tabLayout.setupWithViewPager(dotsViewPager, true);
+        tabLayout.setupWithViewPager(dotsViewPager, true);*/
 
         buttonGoToLogIn = findViewById(R.id.GoToLogIn);
         buttonGoToLogIn.setOnClickListener(this);

@@ -1,6 +1,8 @@
 package y2019.aoc.layanb.layanbaoc2019;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton imageWalButton,imageAddWal;
     TextView textViewWalName;
 
+    public static FragmentManager fragmentmanager;
 
 
     @Override
@@ -27,7 +30,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           imageWalButton =findViewById(R.id.imageWalButton);
           imageWalButton.setOnClickListener(this);
 
+          fragmentmanager = getSupportFragmentManager();
 
+          if(findViewById(R.id.imageAddWal)!=null){
+              if(savedInstanceState!=null)
+                  return;
+          }
+
+        FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
+          AddWalFragment addWalFragment = new AddWalFragment();
+          fragmentTransaction.add(R.id.imageAddWal,addWalFragment,null);
+          fragmentTransaction.commit();
     }
 
 
@@ -61,12 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v == imageWalButton) {
             Intent i = new Intent(this, OverviewActivity.class);
-//            i.putExtra("name", textViewWalName.getText().toString());
             startActivity(i);
         }
         if (v == imageAddWal) {
-            Intent i = new Intent(this, WhenSignUpActivity.class);
-            startActivity(i);}
+            Intent i = new Intent(this, AddWalFragment.class);
+            startActivity(i);
+        }
 
     }
 }
