@@ -43,15 +43,21 @@
             android:gravity="center"
             android:text="TextView"
             />
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageAddWal"
-            android:layout_width="121dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/fileimage" />
+            <ImageButton
+                android:id="@+id/imageAddWal"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/fileimage" />
+        </FrameLayout>
+
     </LinearLayout>
 
 

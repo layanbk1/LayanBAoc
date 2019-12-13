@@ -17,7 +17,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton imageWalButton,imageAddWal;
-    TextView textViewWalName;
 
     public static FragmentManager fragmentmanager;
 
@@ -27,23 +26,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-          imageWalButton =findViewById(R.id.imageWalButton);
-          imageWalButton.setOnClickListener(this);
+        imageWalButton = findViewById(R.id.imageWalButton);
+        imageWalButton.setOnClickListener(this);
 
-          fragmentmanager = getSupportFragmentManager();
+        imageAddWal = findViewById(R.id.imageAddWal);
+        imageAddWal.setOnClickListener(this);
 
-          if(findViewById(R.id.imageAddWal)!=null){
-              if(savedInstanceState!=null)
-                  return;
-          }
+        fragmentmanager = getSupportFragmentManager();
 
-        FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
-          AddWalFragment addWalFragment = new AddWalFragment();
-          fragmentTransaction.add(R.id.imageAddWal,addWalFragment,null);
-          fragmentTransaction.commit();
+
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,7 +65,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v == imageWalButton) {
-            Intent i = new Intent(this, OverviewActivity.class);
+
+            Intent i = new Intent(this, AddWalFragment.class);
+            FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
+            AddWalFragment addWalFragment = new AddWalFragment();
+            fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
             startActivity(i);
         }
         if (v == imageAddWal) {
