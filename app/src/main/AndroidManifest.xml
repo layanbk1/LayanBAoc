@@ -17,6 +17,7 @@
         <activity android:name=".WhenSignUpActivity" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".OverviewActivity" />
+
         <activity
             android:name=".FirstPageActivity"
             android:label="@string/title_activity_main2"

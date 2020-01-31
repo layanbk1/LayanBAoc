@@ -66,17 +66,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v == imageWalButton) {
 
-            Intent i = new Intent(this, AddWalFragment.class);
+          /*  Intent i = new Intent(this, AddWalFragment.class);
             FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
             AddWalFragment addWalFragment = new AddWalFragment();
             fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-            startActivity(i);
+            startActivity(i);*/
         }
         if (v == imageAddWal) {
-            Intent i = new Intent(this, AddWalFragment.class);
-            startActivity(i);
+         //   Intent i = new Intent(this, AddWalFragment.class);
+        //    startActivity(i);
         }
 
     }
