@@ -66,8 +66,6 @@ public class OverviewActivity extends AppCompatActivity {
         });
     }
 
-
-
      DatePickerDialog.OnDateSetListener dateSetListener =
             new DatePickerDialog.OnDateSetListener() {
                 public void onDateSet(DatePicker view, int year, int month, int day) {

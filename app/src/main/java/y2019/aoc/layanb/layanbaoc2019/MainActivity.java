@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageButton imageWalButton,imageAddWal;
 
-    public static FragmentManager fragmentmanager;
+  //  public static FragmentManager fragmentmanager;
 
 
     @Override
@@ -30,9 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageWalButton.setOnClickListener(this);
 
         imageAddWal = findViewById(R.id.imageAddWal);
-        imageAddWal.setOnClickListener(this);
-
-        fragmentmanager = getSupportFragmentManager();
+        imageAddWal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                AddWalFragment addWalFragment = new AddWalFragment();
+                fm.beginTransaction().add(R.id.fragment_container, addWalFragment).commit();
+            }
+        });
 
 
     }
@@ -62,21 +67,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void onClick(View v) {
+     public void onClick(View v) {
 
-        if (v == imageWalButton) {
 
-          /*  Intent i = new Intent(this, AddWalFragment.class);
+      /* if (v == imageAddWal) {
+
+            Intent i = new Intent(this, AddWalFragment.class);
             FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
             AddWalFragment addWalFragment = new AddWalFragment();
             fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, addWalFragment).commit();
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-            startActivity(i);*/
-        }
-        if (v == imageAddWal) {
-         //   Intent i = new Intent(this, AddWalFragment.class);
-        //    startActivity(i);
+
+
+            startActivity(i);
+        }*/
+
+        if (v == imageWalButton) {
+            Intent i = new Intent(this, OverviewActivity.class);
+           startActivity(i);
         }
 
     }
