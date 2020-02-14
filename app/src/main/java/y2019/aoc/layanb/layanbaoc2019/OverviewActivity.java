@@ -28,6 +28,7 @@ public class OverviewActivity extends AppCompatActivity {
   //  private OverviewActivity.SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     ImageButton ButtonCalendar;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +50,26 @@ public class OverviewActivity extends AppCompatActivity {
                     datePickerDialog.show();
             }
         });
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_overview:
+                        Toast.makeText(OverviewActivity.this, "empty password or email", Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.action_transaction:
+                        Toast.makeText(OverviewActivity.this, "transact", Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.action_plus:
+                        Toast.makeText(OverviewActivity.this, "plus", Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.action_plannings:
+                        Toast.makeText(OverviewActivity.this, "plannings", Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.action_walsettings:
+                        Toast.makeText(OverviewActivity.this, "set", Toast.LENGTH_LONG).show();
+                        break;
 
                 }
                 return true;

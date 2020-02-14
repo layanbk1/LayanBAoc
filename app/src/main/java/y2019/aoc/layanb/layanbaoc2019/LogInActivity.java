@@ -16,6 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "FIREBASE";
