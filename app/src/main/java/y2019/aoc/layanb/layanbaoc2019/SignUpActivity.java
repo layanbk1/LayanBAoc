@@ -101,7 +101,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 } else {
                    createAccount(editTextEmailTwo.getText().toString(), editTextPasswordTwo.getText().toString());
-
+                    Intent i = new Intent(this,WhenSignUpActivity.class);
+                    startActivity(i);
                 }
             }
         }
