@@ -1,6 +1,7 @@
 package y2019.aoc.layanb.layanbaoc2019;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -17,14 +18,17 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton imageWalButton,imageAddWal;
+    private  AddWalFragment AddWalFrag;
 
-  //  public static FragmentManager fragmentmanager;
+  // public static FragmentManager fragmentmanager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AddWalFrag = new AddWalFragment();
 
         imageWalButton = findViewById(R.id.imageWalButton);
         imageWalButton.setOnClickListener(this);
@@ -70,26 +74,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      public void onClick(View v) {
 
 
-      /* if (v == imageAddWal) {
+      if (v == imageAddWal) {
+          setFragment(AddWalFrag);
 
-            Intent i = new Intent(this, AddWalFragment.class);
-            FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
-            AddWalFragment addWalFragment = new AddWalFragment();
-            fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, addWalFragment).commit();
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+        /*  Intent i = new Intent(this, AddWalFragment.class);
+          FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
+          AddWalFragment addWalFragment = new AddWalFragment();
+          fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
+          FragmentManager fragmentManager = getSupportFragmentManager();
+          fragmentManager.beginTransaction()
+                  .replace(R.id.fragment_container, addWalFragment).commit();
+          fragmentTransaction.addToBackStack(null);
+          fragmentTransaction.commit();
 
 
-            startActivity(i);
-        }*/
+          startActivity(i); */
+      }
 
         if (v == imageWalButton) {
             Intent i = new Intent(this, OverviewActivity.class);
            startActivity(i);
         }
 
+    }
+
+    private void setFragment(Fragment fragment) {
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.main_fra,fragment);
+        fragmentTransaction.commit();
     }
 }

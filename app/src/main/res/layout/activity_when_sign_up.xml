@@ -4,76 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".WhenSignUpActivity">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textViewCreateWallet"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="create your wallet"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="110dp"
+        android:layout_height="98dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/walletapp" />
+
+    <TextView
+        android:id="@+id/WalletName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Wallet Name" />
 
-        <TextView
-            android:id="@+id/textViewCreateWallet"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:text="create your first wallet"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextWalName"
+        android:layout_width="348dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text=" " />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="114dp"
-            android:layout_height="140dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/walletapp" />
+    <TextView
+        android:id="@+id/Current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="current wallet money" />
 
-        <TextView
-            android:id="@+id/WalletName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Wallet Name" />
+    <EditText
+        android:id="@+id/editTextCurrent"
+        android:layout_width="348dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text=" " />
 
-        <EditText
-            android:id="@+id/editTextWalName"
-            android:layout_width="348dp"
-            android:layout_height="34dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text=" " />
-
-        <TextView
-            android:id="@+id/textViewCurrency"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:text="Currency" />
+    <TextView
+        android:id="@+id/textViewCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Currency" />
 
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="348dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:entries="@array/currency_array"
-            android:prompt="@string/currency" />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="348dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/currency_array"
+        android:prompt="@string/currency" />
 
-        <Button
-            android:id="@+id/buttonWhenSignUp"
-            android:layout_width="221dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="76dp"
-            android:layout_marginRight="76dp"
-            android:layout_marginTop="20dp"
-            android:text="Sign Up" />
+    <Button
+        android:id="@+id/buttonCreateWal"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="76dp"
+        android:layout_marginRight="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Create wallet" />
 
-
-    </LinearLayout>
 
 </LinearLayout>

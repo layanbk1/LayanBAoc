@@ -15,8 +15,10 @@ import java.util.List;
 
 public class WhenSignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button buttonWhenSignUp;
+    Button createWal;
     EditText editTextWalName;
+    EditText editTextCurrent;
+
 
 
     @Override
@@ -25,13 +27,15 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_when_sign_up);
 
         editTextWalName = findViewById(R.id.editTextWalName);
+        editTextCurrent = findViewById(R.id.editTextCurrent);
 
 
-        buttonWhenSignUp = findViewById(R.id.buttonWhenSignUp);
-        buttonWhenSignUp.setOnClickListener(this);
+        createWal = findViewById(R.id.buttonCreateWal);
+        createWal.setOnClickListener(this);
 
         Spinner s = (Spinner) findViewById(R.id.spinner1);
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(WhenSignUpActivity.this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT);
@@ -47,7 +51,7 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        if(v == buttonWhenSignUp)
+            if(v == createWal)
         {
             Intent i = new Intent(this, MainActivity.class);
             i.putExtra("", editTextWalName.getText().toString());

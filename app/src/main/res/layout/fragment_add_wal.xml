@@ -6,6 +6,57 @@
     tools:context=".AddWalFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewCreateWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="create your first wallet"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/WalletName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Wallet Name" />
+
+        <EditText
+            android:id="@+id/editTextWalName"
+            android:layout_width="348dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/textViewCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="Currency" />
+
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="348dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:entries="@array/currency_array"
+            android:prompt="@string/currency" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonCancel"
