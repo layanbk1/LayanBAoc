@@ -28,12 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        imageAddWal = findViewById(R.id.imageAddWal);
+        imageAddWal.setOnClickListener(this);
+
         AddWalFrag = new AddWalFragment();
 
         imageWalButton = findViewById(R.id.imageWalButton);
         imageWalButton.setOnClickListener(this);
 
-        imageAddWal = findViewById(R.id.imageAddWal);
+
+       /* imageAddWal = findViewById(R.id.imageAddWal);
         imageAddWal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AddWalFragment addWalFragment = new AddWalFragment();
                 fm.beginTransaction().add(R.id.fragment_container, addWalFragment).commit();
             }
-        });
+        }); */
 
 
     }
@@ -71,24 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
      public void onClick(View v) {
-
 
       if (v == imageAddWal) {
           setFragment(AddWalFrag);
-
-        /*  Intent i = new Intent(this, AddWalFragment.class);
-          FragmentTransaction fragmentTransaction = fragmentmanager.beginTransaction();
-          AddWalFragment addWalFragment = new AddWalFragment();
-          fragmentTransaction.replace(R.id.fragment_container, addWalFragment);
-          FragmentManager fragmentManager = getSupportFragmentManager();
-          fragmentManager.beginTransaction()
-                  .replace(R.id.fragment_container, addWalFragment).commit();
-          fragmentTransaction.addToBackStack(null);
-          fragmentTransaction.commit();
-
-
-          startActivity(i); */
       }
 
         if (v == imageWalButton) {
@@ -101,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setFragment(Fragment fragment) {
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.main_fra,fragment);
+        fragmentTransaction.replace(R.id.wal_fra,fragment);
         fragmentTransaction.commit();
     }
 }

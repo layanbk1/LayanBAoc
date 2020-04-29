@@ -18,6 +18,8 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
     Button createWal;
     EditText editTextWalName;
     EditText editTextCurrent;
+    String first;
+    String name;
 
 
 
@@ -29,6 +31,10 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
         editTextWalName = findViewById(R.id.editTextWalName);
         editTextCurrent = findViewById(R.id.editTextCurrent);
 
+        name = editTextWalName.getText().toString() ;
+        first = editTextCurrent.getText().toString();
+
+        Wallet wallet = new Wallet(name,first,0,0,null);
 
         createWal = findViewById(R.id.buttonCreateWal);
         createWal.setOnClickListener(this);
@@ -48,6 +54,7 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
 
             });
     }
+
 
     @Override
     public void onClick(View v) {

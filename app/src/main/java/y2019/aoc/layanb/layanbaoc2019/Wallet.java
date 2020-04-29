@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Wallet {
 
     private String Name;
+    private String Spend;
     private double Income;
     private double Outcome;
     private ArrayList Budget;
@@ -13,9 +14,10 @@ public class Wallet {
 
     }
 
-    public Wallet(String Name,double income,double outcome,ArrayList Budget){
+    public Wallet(String Name,String Spend,double income,double outcome,ArrayList Budget){
 
         this.Name=Name;
+        this.Spend = Spend;
         this.Income=income;
         this.Outcome=outcome;
         this.Budget=Budget;
@@ -27,6 +29,14 @@ public class Wallet {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public String getSpend() {
+        return Spend;
+    }
+
+    public void setSpend(String Spend) {
+        Spend = Spend;
     }
 
     public double getIncome() {
@@ -57,6 +67,7 @@ public class Wallet {
     public String toString() {
         return "Wallet{" +
                 "Name='" + Name + '\'' +
+                ", Spend=" + Spend +
                 ", Income=" + Income +
                 ", Outcome=" + Outcome +
                 ", Budget=" + Budget +

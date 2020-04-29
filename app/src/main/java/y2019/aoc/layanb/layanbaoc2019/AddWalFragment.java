@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 public class AddWalFragment extends Fragment {
 
 
-    private OnFragmentInteractionListener mListener;
+   // private OnFragmentInteractionListener mListener;
 
     public AddWalFragment() {
     }
@@ -33,7 +33,7 @@ public class AddWalFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_add_wal, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
+   /* // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -59,5 +59,5 @@ public class AddWalFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
+    }*/
 }

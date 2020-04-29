@@ -14,7 +14,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
     ImageView imageView4;
     Bitmap bitmap;
-    Button buttonGallery, buttonCamera;
+    Button buttonGallery, buttonCamera,buttonDone;
 
     private static final int CAMERA_REQUEST = 0;
     private static final int GALLERY_REQUEST = 1;
@@ -30,6 +30,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
         buttonGallery = findViewById(R.id.buttonGallery);
         buttonGallery.setOnClickListener(this);
+
+        buttonDone= findViewById(R.id.buttonDone);
+        buttonDone.setOnClickListener(this);
 
         imageView4 = findViewById(R.id.imageView4);
 
@@ -56,5 +59,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                     startActivityForResult(i, GALLERY_REQUEST);
                 }
             }
+        if (view == buttonDone) {
+            Intent i = new Intent(this, SignUpActivity.class);
+            startActivity(i);
+        }
     }
 }

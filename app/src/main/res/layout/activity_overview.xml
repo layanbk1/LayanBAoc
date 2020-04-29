@@ -52,7 +52,7 @@
         <FrameLayout
             android:id="@+id/main_fra"
             android:layout_width="match_parent"
-            android:layout_height="409dp">
+            android:layout_height="580dp">
 
         </FrameLayout>
 

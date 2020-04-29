@@ -7,47 +7,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <SearchView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right">
+            android:orientation="horizontal">
 
-        </SearchView>
-    </LinearLayout>
 
-    <LinearLayout
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+            </SearchView>
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/wal_fra"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:layout_height="685dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageWalButton"
-            android:layout_width="match_parent"
-            android:layout_height="164dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/walletttttt" />
+            <ImageButton
+                android:id="@+id/imageWalButton"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/walletttttt" />
 
-        <TextView
-            android:id="@+id/walNameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="TextView"
-            />
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/walNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:text="TextView" />
 
             <ImageButton
                 android:id="@+id/imageAddWal"
@@ -57,11 +57,9 @@
                 android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/fileimage" />
-        </FrameLayout>
 
-    </LinearLayout>
-
-
+        </LinearLayout>
+    </FrameLayout>
 
 
 </LinearLayout>
