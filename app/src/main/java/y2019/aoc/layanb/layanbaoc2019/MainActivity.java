@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageButton imageWalButton,imageAddWal;
     private  AddWalFragment AddWalFrag;
+    TextView walNameTextView;
 
   // public static FragmentManager fragmentmanager;
 
@@ -37,18 +38,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageWalButton.setOnClickListener(this);
 
 
-       /* imageAddWal = findViewById(R.id.imageAddWal);
-        imageAddWal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                AddWalFragment addWalFragment = new AddWalFragment();
-                fm.beginTransaction().add(R.id.fragment_container, addWalFragment).commit();
-            }
-        }); */
+        walNameTextView = (TextView)findViewById(R.id.walNameTextView);
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
 
-
+        if(b!=null)
+        {
+            String j =(String) b.get("name");
+            walNameTextView.setText(j);
+        }
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.profile:
-                Intent i = new Intent(this, Profile.class);
+            case R.id.about_us:
+                Intent i = new Intent(this, AboutUsActivity.class);
                 startActivity(i);
                 break;
             case R.id.settings:

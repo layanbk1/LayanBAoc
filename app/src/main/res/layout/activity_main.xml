@@ -8,29 +8,15 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <SearchView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-            </SearchView>
-        </LinearLayout>
-
     <FrameLayout
         android:id="@+id/wal_fra"
         android:layout_width="match_parent"
-        android:layout_height="685dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_height="572dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <ImageButton
@@ -47,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:gravity="center"
-                android:text="TextView" />
+                />
 
             <ImageButton
                 android:id="@+id/imageAddWal"

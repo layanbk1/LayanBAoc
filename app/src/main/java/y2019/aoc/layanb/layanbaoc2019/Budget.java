@@ -6,6 +6,7 @@ public class Budget implements Serializable {
     private String Name;
     private String BudFor;
     private double Goal;
+    private double current;
 
     public Budget(String Name,String BudFor,double Goal) {
 

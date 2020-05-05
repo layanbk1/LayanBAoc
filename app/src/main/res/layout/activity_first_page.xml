@@ -12,15 +12,26 @@
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
         android:lineSpacingMultiplier="1.2"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:text="Welcome to OnTrack" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/pig" />
 
     <Button
         android:id="@+id/GoToLogIn"
         android:layout_width="176dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_margin="120dp"
+        android:layout_margin="80dp"
+        android:background="#ffcc00"
         android:text="LOGIN" />
 
     <Button
@@ -28,6 +39,7 @@
         android:layout_width="176dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
+        android:background="#ffcc00"
         android:text="SIGNUP" />
 
 </LinearLayout>

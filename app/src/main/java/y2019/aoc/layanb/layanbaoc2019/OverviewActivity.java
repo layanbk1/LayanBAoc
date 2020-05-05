@@ -18,18 +18,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class OverviewActivity extends AppCompatActivity {
+public class OverviewActivity extends AppCompatActivity implements View.OnClickListener{
 
   //  private OverviewActivity.SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-    ImageButton ButtonCalendar;
+    ImageButton ButtonCalendar,ButtonHome;
     BottomNavigationView bottomNavigationView;
+
+
 
     private  MoneyFragment moneyFrag;
     private  TranFragment tranFrag;
@@ -42,6 +45,8 @@ public class OverviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
 
+
+
         moneyFrag = new MoneyFragment();
         tranFrag = new TranFragment();
         setFrag = new SetFragment();
@@ -52,6 +57,9 @@ public class OverviewActivity extends AppCompatActivity {
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        ButtonHome = findViewById(R.id.ButtonHome);
+        ButtonHome.setOnClickListener(this);
 
         ButtonCalendar = findViewById(R.id.ButtonCalendar);
         ButtonCalendar.setOnClickListener(new View.OnClickListener() {
@@ -107,4 +115,14 @@ public class OverviewActivity extends AppCompatActivity {
                             " / " + view.getDayOfMonth(), Toast.LENGTH_SHORT).show();
                 }
             };
+
+    @Override
+    public void onClick(View v) {
+
+        if (v == ButtonHome) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        }
+
 }
+    }

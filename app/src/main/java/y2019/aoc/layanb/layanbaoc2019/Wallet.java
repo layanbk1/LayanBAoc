@@ -63,6 +63,18 @@ public class Wallet {
         Budget = budget;
     }
 
+    public void addIncome(double N){
+        setIncome(getIncome()+N);
+    }
+
+    public void addOutcome(double O){
+        setIncome(getOutcome()+O);
+    }
+
+    public double expence(){
+        return this.getIncome()-this.getOutcome();
+    }
+
     @Override
     public String toString() {
         return "Wallet{" +

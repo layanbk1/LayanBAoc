@@ -23,6 +23,7 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,9 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
         name = editTextWalName.getText().toString() ;
         first = editTextCurrent.getText().toString();
 
-        Wallet wallet = new Wallet(name,first,0,0,null);
+        Wallet wallet = new Wallet();
+        wallet.setName(name);
+        wallet.setSpend(first);
 
         createWal = findViewById(R.id.buttonCreateWal);
         createWal.setOnClickListener(this);
@@ -45,6 +48,7 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(WhenSignUpActivity.this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT);
+
             }
 
             @Override
@@ -53,6 +57,8 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
             }
 
             });
+
+
     }
 
 
@@ -61,7 +67,8 @@ public class WhenSignUpActivity extends AppCompatActivity implements View.OnClic
             if(v == createWal)
         {
             Intent i = new Intent(this, MainActivity.class);
-            i.putExtra("", editTextWalName.getText().toString());
+            String s=editTextWalName.getText().toString();
+            i.putExtra("name", s);
             startActivity(i);
         }
     }

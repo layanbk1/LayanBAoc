@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">LayanBAoc2019</string>
 
+    <string name="nav_categories">Expense categories</string>
+    <string name="expense_category_name_string">Category</string>
 
     <string name="currency">Currency</string>
+    <string name="money">Choose Income/Outcome </string>
+
+    <string-array name="money_array">
+        <item>Outcome</item>
+        <item>Income</item>
+    </string-array>
 
     <string-array name="currency_array">
         <item>ILS</item>
@@ -27,5 +35,18 @@
         <item>@drawable/add</item>
         <item>@drawable/add</item>
     </integer-array>
+
+    <!-- Predefined expense categories -->
+    <string name="cat_general">General</string>
+    <string name="cat_clothes">Clothes</string>
+    <string name="cat_entertainment">Entertainment</string>
+    <string name="cat_food">Food</string>
+    <string name="cat_health">Health</string>
+    <string name="cat_household">Household</string>
+    <string name="cat_hygiene">Hygiene</string>
+    <string name="cat_pets">Pets</string>
+    <string name="cat_presents">Presents</string>
+    <string name="cat_sports">Sports</string>
+    <string name="cat_transportation">Transportation</string>
 
 </resources>

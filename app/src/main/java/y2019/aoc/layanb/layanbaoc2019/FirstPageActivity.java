@@ -18,7 +18,7 @@ import android.widget.ImageView;
 public class FirstPageActivity extends AppCompatActivity  implements View.OnClickListener {
 
     Button buttonGoToLogIn, buttonGoToSignUp;
-    ViewPager dotsViewPager;
+
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -26,27 +26,12 @@ public class FirstPageActivity extends AppCompatActivity  implements View.OnClic
         setContentView(R.layout.activity_first_page);
 
 
-     //   ViewPager pager = (ViewPager) findViewById(R.id.photos_viewpager);
-    //    PagerAdapter adapter = new PhotosAdapter(getChildFragmentManager(), photosUrl);
-      //  pager.setAdapter(adapter);
-
-      //  TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-      //  tabLayout.setupWithViewPager(pager, true);
-
-      /*  dotsViewPager = (ViewPager) findViewById(R.id.dots_viewpager);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
-        tabLayout.setupWithViewPager(dotsViewPager, true);*/
-
         buttonGoToLogIn = findViewById(R.id.GoToLogIn);
         buttonGoToLogIn.setOnClickListener(this);
 
         buttonGoToSignUp = findViewById(R.id.GoToSignUp);
         buttonGoToSignUp.setOnClickListener(this);
 
-     //   ViewGroup rootView = (ViewGroup) inflater.inflate(
-    //    R.layout.fragment_screen_slide_page, container, false);
-
-//   return rootView;
 
     }
 

@@ -60,8 +60,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 }
             }
         if (view == buttonDone) {
-            Intent i = new Intent(this, SignUpActivity.class);
-            startActivity(i);
+           /* Intent i = new Intent(this, SignUpActivity.class);
+            startActivity(i); */
+            finish();
         }
     }
 }

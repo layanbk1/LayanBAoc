@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="y2019.aoc.layanb.layanbaoc2019">
+    package="y2019.aoc.layanb.layanbaoc2019" >
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".AboutUsActivity" >
+        </activity>
         <activity android:name=".LogInActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Profile" />
         <activity android:name=".Settings" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".WhenSignUpActivity" />
@@ -20,7 +21,7 @@
         <activity
             android:name=".FirstPageActivity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
